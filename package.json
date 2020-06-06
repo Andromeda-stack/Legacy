@@ -1,0 +1,9 @@
+{
+    "name": "legacy",
+    "version": "1.0.0",
+    "dependencies": {
+        "discord.js": "^12.2.0",
+        "nodemon": "^2.0.4",
+        "pacbot": "^0.21.0"
+    }
+}
