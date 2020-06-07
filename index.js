@@ -27,17 +27,18 @@ for (const file of eventFiles) {
 client.once('ready', () => {
 	try {
 		console.log("--------------------------------")
-		console.log("Start up was sucessful");
+		console.log("\x1b[32m", "Start up was sucessful");
 		console.log(`Prefix: ${prefix}`);
 		var d = new Date();
 		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-		console.log(`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()}`);
+		console.log(`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()}`, "\x1b[0m");
 		client.user.setActivity(`${prefix}help, Watching over ${client.guilds.cache.size} guilds!`);
 
 	} catch (startUpError) {
-		console.log(`StartUp error: ${startUpError}`)
+		console.log("\x1b[31m",`Legacy Start Procedure Error: ${startUpError}`, "\x1b[0m")
 	}
 })
+
 
 
 
@@ -65,3 +66,4 @@ client.events.forEach((r) => {
 })
 
 client.login(token)
+

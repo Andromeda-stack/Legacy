@@ -11,10 +11,11 @@ module.exports = [{
 
         .setDescription('Joined the guild!')
 
-        .setFooter('Legacy Help Command, LiftFork#6609')
+        .setFooter('Legacy Audit: Joined')
 
         .setTimestamp()
-        member.guild.channels.cache.get('704891091001933855').send(helpEmbed)
+        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
     }
 }]
 
+console.log('Audit Log loaded');
