@@ -30,7 +30,7 @@ module.exports = [{
         .setFooter('Legacy Audit: Joined')
 
         .setTimestamp()
-        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+        member.guild.channels.get('719075091727777873').send(helpEmbed)
     }
 }]
 
