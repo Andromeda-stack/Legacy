@@ -16,6 +16,22 @@ module.exports = [{
         .setTimestamp()
         member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
     }
+},{
+    name: 'guildMemberRemove',
+    execute(member){
+        const helpEmbed = new mess.MessageEmbed()
+
+        .setColor(0x28C9D0)
+
+        .setTitle(`${member.user.tag} (${member.id})`)
+
+        .setDescription('Left the Guild!')
+
+        .setFooter('Legacy Audit: Joined')
+
+        .setTimestamp()
+        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+    }
 }]
 
 console.log('Audit Log loaded');

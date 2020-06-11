@@ -14,13 +14,16 @@ module.exports = {
         if (isNaN(amountCalledToDelete)) return message.reply("You must a actual number");
         if (amountCalledToDelete > 100) return message.reply("You can only delete upto **100 messages**");
         if (amountCalledToDelete < 1) return message.reply("You must delete at **least 1 message**");
-
-        await message.channel.messages.fetch({
-            limit: amountCalledToDelete
-        }).then(messages => {
+        try{
+            let messages = await message.channel.messages.fetch({
+                limit: amountCalledToDelete
+            })
             message.channel.bulkDelete(messages);
-            message.channel.send(`Deleted ${amountCalledToDelete} message/s`);
-
-        })
+            let newMessage = await message.channel.send(`Deleted ${amountCalledToDelete} message/s`)
+            newMessage.delete({timeout: 2000})
+        }
+        catch(error){
+            console.error(error)
+        }
     }
 }
