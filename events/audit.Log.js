@@ -42,9 +42,9 @@ module.exports = [{
 
         .setColor(0x28C9D0)
 
-        .setTitle(deleteMessage.member.displayName)
+        .setTitle('Purge Command used!')
 
-        .setDescription(messages.array().length)
+        .setDescription(`${deleteMessage.member.displayName}, Deleted ${messages.array().length}`)
 
         .setFooter('Legacy Audit: Joined')
 

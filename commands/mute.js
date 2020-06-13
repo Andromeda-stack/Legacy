@@ -1,5 +1,5 @@
 console.log("Mute command loaded");
-
+///////////////// broken to helll////////////////////////////////
 const mess = require('discord.js')
 const {
     prefix
@@ -13,46 +13,14 @@ module.exports = {
         if (!message.mentions.users.size) return message.reply('You have to mention someone to mute!')
         const taggedUser = message.mentions.users.first();
         if (taggedUser) {
-            const members = message.guild.member(taggedUser)
-            if (members) {
-                members
+            const members = message.guild.member(taggedUser).then(() => {
+                message.member.roles.add('635099199234375691') // do \@Role here to get the Role ID
+                message.reply(`Muted ${message.author}`)
+            })
 
-                    .then(() => {
-                        message.member.roles.add('635099199234375691') // do \@Role here to get the Role ID
-                        message.reply(`Muted ${message.author}`)
-                    })
-
-                    .catch(err => {
-                        message.reply(`I couldnt mute ${taggedUser.tag}`)
-                    })
-            }
+            .catch(err => {
+                message.reply(`I couldnt mute ${taggedUser.tag}`)
+            })
         }
     }
 }
-
-
-
-/*module.exports = {
-    name: "mute-info",
-    description: 'Mutes users, w/o reason or set time YET, Mute command is in development', // rework soon
-    execute(message) {
-        const muteInfo = new mess.MessageEmbed()
-            .setTitle(this.name)
-
-            .setColor(0x28C9D0)
-
-            .addFields({
-                name: 'Description',
-                value: `${this.description}`,
-
-                name: 'Usage',
-                value: `${prefix}mute @{Users-mention}`
-            })
-
-            .setFooter('Legacy Mute Info, LiftFork#6609')
-
-            .setTimestamp()
-
-        message.channel.send(muteInfo)
-    }
-}*/
