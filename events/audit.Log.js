@@ -47,7 +47,7 @@ module.exports = [{
 
         .setDescription(`${deleteMessage.member.displayName}, Deleted ${messages.array().length}`)
 
-        .setFooter('Legacy Audit: Joined')
+        .setFooter('Legacy Audit: Purge')
 
         .setTimestamp()
 

@@ -1,11 +1,12 @@
 const fs = require('fs');
+const chalk = require('chalk')
 const Discord = require('discord.js');
 const {
 	prefix,
 	token
 } = require('./prop.json');
 
-const chalk = require('chalk')
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -31,7 +32,7 @@ client.once('ready', () => {
 		var d = new Date();
 		var ampm = (d.getHours() >= 12) ? "PM" : "AM";
 		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-		
+
 		[
 			"Start up was sucessful",
 			`Prefix: ${prefix}`,
@@ -57,6 +58,7 @@ client.on('message', message => {
 	if (!client.commands.has(command)) return;
 
 	try {
+
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
