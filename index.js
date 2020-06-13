@@ -31,11 +31,13 @@ client.once('ready', () => {
 		var d = new Date();
 		var ampm = (d.getHours() >= 12) ? "PM" : "AM";
 		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		
 		[
 			"Start up was sucessful",
 			`Prefix: ${prefix}`,
 			`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}`
 		].forEach(line => console.log(chalk.green(line)))
+
 		client.user.setActivity(`${prefix}help, Watching over ${client.guilds.cache.size} guilds!`);
 
 	} catch (startUpError) {
@@ -48,7 +50,7 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
-	
+
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
 
