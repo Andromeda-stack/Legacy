@@ -9,12 +9,11 @@ module.exports = {
     name: 'help',
     description: 'Simple help embed',
     execute(message) {
-
         const helpEmbed = new mess.MessageEmbed()
 
             .setColor(0x28C9D0)
 
-            .setTitle(message.guild.name)
+            .setTitle(message.guild)
 
             .addFields({
                 name: `${prefix}purge {1-100}`,
