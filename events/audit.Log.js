@@ -37,7 +37,8 @@ module.exports = [{
     name: 'messageDeleteBulk',
     execute(messages){
         const message = messages.first()
-        const deleteMessage = messages.last()
+        const deleteMessage = messages.last() // known issue with getting author of the command 
+        
         const helpEmbed = new mess.MessageEmbed()
 
         .setColor(0x28C9D0)
