@@ -15,6 +15,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
+// test
 client.events = new Discord.Collection();
 
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
