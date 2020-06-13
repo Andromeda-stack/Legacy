@@ -1,5 +1,6 @@
 
 const mess = require('discord.js')
+
 module.exports = [{
     name: 'guildMemberAdd',
     execute(member){
@@ -27,10 +28,30 @@ module.exports = [{
 
         .setDescription('Left the Guild!')
 
+        .setFooter('Legacy Audit: Left')
+
+        .setTimestamp()
+        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+    }
+},{
+    name: 'messageDeleteBulk',
+    execute(messages){
+        const message = messages.first()
+        const deleteMessage = messages.last()
+        const helpEmbed = new mess.MessageEmbed()
+
+        .setColor(0x28C9D0)
+
+        .setTitle(deleteMessage.member.displayName)
+
+        .setDescription(messages.array().length)
+
         .setFooter('Legacy Audit: Joined')
 
         .setTimestamp()
-        member.guild.channels.get('719075091727777873').send(helpEmbed)
+
+        message.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+       
     }
 }]
 

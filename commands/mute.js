@@ -30,3 +30,29 @@ module.exports = {
     }
 }
 
+
+
+/*module.exports = {
+    name: "mute-info",
+    description: 'Mutes users, w/o reason or set time YET, Mute command is in development', // rework soon
+    execute(message) {
+        const muteInfo = new mess.MessageEmbed()
+            .setTitle(this.name)
+
+            .setColor(0x28C9D0)
+
+            .addFields({
+                name: 'Description',
+                value: `${this.description}`,
+
+                name: 'Usage',
+                value: `${prefix}mute @{Users-mention}`
+            })
+
+            .setFooter('Legacy Mute Info, LiftFork#6609')
+
+            .setTimestamp()
+
+        message.channel.send(muteInfo)
+    }
+}*/
