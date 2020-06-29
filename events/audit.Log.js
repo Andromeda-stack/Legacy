@@ -54,6 +54,25 @@ module.exports = [{
         message.guild.channels.cache.get('719075091727777873').send(helpEmbed)
        
     }
+},{
+    name: 'roleCreate',
+    execute(message){
+        
+        const helpEmbed = new mess.MessageEmbed()
+
+        .setColor(0x28C9D0)
+
+        .setTitle('New Role Created!')
+
+        .setDescription(`A new role was created ${message.roles.name}`)
+
+        .setFooter('Legacy Audit: Created Role')
+
+        .setTimestamp()
+
+        message.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+       
+    }
 }]
 
 console.log('Audit Log loaded');
