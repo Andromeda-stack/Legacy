@@ -45,7 +45,7 @@ module.exports = [{
 
         .setTitle('Purge Command used!')
 
-        .setDescription(`${deleteMessage.member.displayName}, Deleted ${messages.array().length}`)
+        .setDescription(`${deleteMessage.member.displayName} << Please ignore the author/s name who used the command for the time being!, Deleted ${messages.array().length}`)
 
         .setFooter('Legacy Audit: Purge')
 
