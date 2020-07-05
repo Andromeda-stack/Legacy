@@ -57,21 +57,21 @@ module.exports = [{
 },{
     name: 'roleCreate',
     execute(message){
-        
+       const role = message.guild.roles.fetch(role.name)
+
         const helpEmbed = new mess.MessageEmbed()
 
         .setColor(0x28C9D0)
 
         .setTitle('New Role Created!')
 
-        .setDescription(`A new role was created ${message.roles.name}`)
+        .setDescription(`A new role was created ${role}`)
 
         .setFooter('Legacy Audit: Created Role')
 
         .setTimestamp()
 
-        message.guild.channels.cache.get('719075091727777873').send(helpEmbed)
-       
+        message.guild.channels.cache.get('719075091727777873').send(helpEmbed)       
     }
 }]
 

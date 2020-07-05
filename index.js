@@ -1,12 +1,12 @@
 const fs = require('fs');
-const chalk = require('chalk')
 const Discord = require('discord.js');
 const {
 	prefix,
 	token
 } = require('./prop.json');
 
-
+const chalk = require('chalk')
+const moment = require('moment')
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -32,11 +32,11 @@ client.once('ready', () => {
 		var d = new Date();
 		var ampm = (d.getHours() >= 12) ? "PM" : "AM";
 		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
+		
 		[
 			"Start up was sucessful",
 			`Prefix: ${prefix}`,
-			`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}`
+			`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}, Date started is ${moment().format('ll')}`
 		].forEach(line => console.log(chalk.green(line)))
 
 		client.user.setActivity(`${prefix}help, Watching over ${client.guilds.cache.size} guilds!`);
@@ -58,7 +58,6 @@ client.on('message', message => {
 	if (!client.commands.has(command)) return;
 
 	try {
-
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
