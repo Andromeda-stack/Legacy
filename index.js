@@ -37,7 +37,7 @@ client.once('ready', () => {
 			"Start up was sucessful",
 			`Prefix: ${prefix}`,
 			`Start-Up Log: Day is ${days[d.getDay()]}, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}, Date started is ${moment().format('ll')}`
-		].forEach(line => console.log(chalk.green(line)))
+		].forEach(line => console.log(chalk.greenBright(line)))
 
 		client.user.setActivity(`${prefix}help, Watching over ${client.guilds.cache.size} guilds!`);
 
@@ -45,7 +45,6 @@ client.once('ready', () => {
 		console.log(chalk.red(`Legacy Start Procedure Error: ${startUpError}`))
 	}
 })
-
 
 
 
