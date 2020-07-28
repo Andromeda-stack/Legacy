@@ -3,7 +3,7 @@ const {
     prefix
 } = require('../prop.json');
 
-console.log('Help command loaded');
+
 
 module.exports = {
     name: 'help',
@@ -34,6 +34,8 @@ module.exports = {
             .setFooter('Legacy Help Command, LiftFork#6609')
 
             .setTimestamp()
-        message.channel.send(helpEmbed);
+             message.channel.send(helpEmbed)
     }
 }
+
+console.log('Help command loaded');

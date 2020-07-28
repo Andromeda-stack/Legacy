@@ -1,4 +1,3 @@
-console.log("Purge command loaded");
 
 
 
@@ -27,3 +26,5 @@ module.exports = {
         }
     }
 }
+
+console.log("Purge command loaded");
