@@ -32,7 +32,7 @@ client.once('ready', () => {
 		var d = new Date();
 		var ampm = (d.getHours() >= 12) ? "PM" : "AM";
 		var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-		
+
 		[
 			"Start up was sucessful",
 			`Prefix: ${prefix}`,
@@ -60,7 +60,7 @@ client.on('message', message => {
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply(`there was an error trying to execute command: (${command})!`);
 	}
 });
 
