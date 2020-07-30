@@ -1,4 +1,4 @@
-console.log("Kick command loaded");
+
 
 module.exports = {
     name: 'kick',
@@ -30,3 +30,5 @@ module.exports = {
         }
     },
 };
+
+console.log("Kick command loaded");

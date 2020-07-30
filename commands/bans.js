@@ -1,4 +1,4 @@
-console.log("Bans command loaded");
+
 
 module.exports = {
     name: 'ban',
@@ -33,3 +33,5 @@ module.exports = {
         }
     }
 }
+
+console.log("Bans command loaded");
