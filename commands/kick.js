@@ -1,4 +1,5 @@
 
+const mess = require('discord.js')
 
 module.exports = {
     name: 'kick',
@@ -19,8 +20,10 @@ module.exports = {
                 mem
                     .kick({
                         reason: `${kickReason}`
+                        
                     })
                     .then(() => {
+                        
                         message.reply(`:boot: **Successfully kicked ${taggedUser.tag}** for Reason: **${kickReason}**`)
                     })
                     .catch(err => {
@@ -30,5 +33,6 @@ module.exports = {
         }
     },
 };
+
 
 console.log("Kick command loaded");

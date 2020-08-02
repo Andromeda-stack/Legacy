@@ -1,7 +1,9 @@
 const mess = require('discord.js')
+
 const {
     prefix
 } = require('../prop.json');
+const { ModLevel } = require('./kick');
 
 
 
@@ -23,15 +25,16 @@ module.exports = {
                 value: 'Bans members, **Mods + Admins**'
             }, {
                 name: `${prefix}kick`,
-                value: 'Kick members, **Mods + Admins**'
-            }, {
-                name: '\u200B',
-                value: '\u200B'
-            }, {
+                value: `Allowed only for ${ModLevel.Admin}`
+            },
+                {
+                    name: '\u200B',
+                    value: '\u200B'
+                }, {
                 name: `${prefix}ping`,
                 value: 'Shows current API Latency'
             })
-            .setFooter('Legacy Help Command, LiftFork#6609')
+            .setFooter('Legacy Help Command, Andromeda#6609')
 
             .setTimestamp()
         message.channel.send(helpEmbed)
