@@ -1,6 +1,7 @@
 
 const mess = require('discord.js')
 
+
 module.exports = {
     name: 'kick',
     description: 'Kicks users from the guild',
