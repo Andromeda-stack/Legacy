@@ -20,3 +20,7 @@ Feel free to make a fork!
 
 # Legacy discord! 
 * https://discord.gg/V6Q2W8v
+
+# Future plans
+
+Some future plans we have, are to create a TypeScript discord bot, With more AI interaction, which will include speaking with the bot, More information to come once the project starts!
