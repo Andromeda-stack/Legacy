@@ -10,6 +10,8 @@ Feel free to make a fork!
 
 * Download legacy and run "npm install discord.js"
 
+* Create a "prop.json" and include "token" and "prefix"
+
 * Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
 
 * Run "node index.js" and the bot will start!
