@@ -22,13 +22,6 @@ module.exports = {
         }
       )
 
-      /*.setDescription(
-        `Done! latency = ${awaitPing.createdTimestamp -
-          message.createdTimestamp}ms  API = ${Math.round(
-          message.client.ws.ping
-        )}ms`
-      )*/
-
       .setFooter("Legacy Audit: Ping")
 
       .setTimestamp();

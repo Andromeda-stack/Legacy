@@ -1,5 +1,4 @@
 const mess = require("discord.js");
-const funcs = require("../functions/funcs");
 
 module.exports = {
   name: "kick",
