@@ -7,9 +7,6 @@ const moment = require("moment");
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-
-
-
 const commandFiles = fs
   .readdirSync("./commands")
   .filter(file => file.endsWith(".js"));
@@ -19,22 +16,14 @@ for (const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
-
-
-
-
 const gameFiles = fs
-    .readdirSync("./games")
-    .filter(file => file.endsWith(".js"));
+  .readdirSync("./games")
+  .filter(file => file.endsWith(".js"));
 
 for (const file of gameFiles) {
-    const game = require(`./games/${file}`);
-    client.commands.set(game.name, game);
+  const game = require(`./games/${file}`);
+  client.commands.set(game.name, game);
 }
-
-
-
-
 
 client.events = new Discord.Collection();
 

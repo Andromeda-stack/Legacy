@@ -1,14 +1,10 @@
-// Still being worked on
-const mess = require('discord.js');
-
-
+const mess = require("discord.js");
 
 module.exports = {
-    name: "mute",
-    description: "Mutes people",
+  name: "mute",
+  description: "Mutes people",
 
-    execute(message){
-            funcs.GetRole(message)
-    }
-}
-
+  execute(message) {
+    funcs.GetRole(message);
+  }
+};
