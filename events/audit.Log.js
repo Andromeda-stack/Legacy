@@ -1,38 +1,40 @@
+const mess = require("discord.js");
 
-const mess = require('discord.js')
-
-module.exports = [{
-    name: 'guildMemberAdd',
+module.exports = [
+  {
+    name: "guildMemberAdd",
     execute(member) {
-        const helpEmbed = new mess.MessageEmbed()
+      const helpEmbed = new mess.MessageEmbed()
 
-            .setColor(0x28C9D0)
+        .setColor(0x28c9d0)
 
-            .setTitle(`${member.user.tag} (${member.id})`)
+        .setTitle(`${member.user.tag} (${member.id})`)
 
-            .setDescription('Joined the guild!')
+        .setDescription("Joined the guild!")
 
-            .setFooter('Legacy Audit: Joined')
+        .setFooter("Legacy Audit: Joined")
 
-            .setTimestamp()
-        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+        .setTimestamp();
+      member.guild.channels.cache.get("719075091727777873").send(helpEmbed);
     }
-}, {
-    name: 'guildMemberRemove',
+  },
+  {
+    name: "guildMemberRemove",
     execute(member) {
-        const helpEmbed = new mess.MessageEmbed()
+      const helpEmbed = new mess.MessageEmbed()
 
-            .setColor(0x28C9D0)
+        .setColor(0x28c9d0)
 
-            .setTitle(`${member.user.tag} (${member.id})`)
+        .setTitle(`${member.user.tag} (${member.id})`)
 
-            .setDescription('Left the Guild!')
+        .setDescription("Left the Guild!")
 
-            .setFooter('Legacy Audit: Left')
+        .setFooter("Legacy Audit: Left")
 
-            .setTimestamp()
-        member.guild.channels.cache.get('719075091727777873').send(helpEmbed)
+        .setTimestamp();
+      member.guild.channels.cache.get("719075091727777873").send(helpEmbed);
     }
-}]
+  }
+];
 
-console.log('Audit Log loaded');
+console.log("Audit Log loaded");
