@@ -23,11 +23,15 @@ module.exports = {
         },
         {
           name: `${prefix}kick`,
-          value: `Allowed only for **Mods + Adminds**`
+          value: `Kick members, **Mods + Admins**`
         },
         {
           name: "\u200B",
           value: "\u200B"
+        },
+        {
+          name: `${prefix}flip`,
+          value: "Heads or Tails Game!"
         },
         {
           name: `${prefix}ping`,
