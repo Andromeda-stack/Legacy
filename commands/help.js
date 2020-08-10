@@ -1,7 +1,6 @@
 const mess = require("discord.js");
 
 const { prefix } = require("../prop.json");
-const { ModLevel } = require("./kick");
 
 module.exports = {
   name: "help",
@@ -24,7 +23,7 @@ module.exports = {
         },
         {
           name: `${prefix}kick`,
-          value: `Allowed only for ${ModLevel.Admin}`
+          value: `Allowed only for **Mods + Adminds**`
         },
         {
           name: "\u200B",
