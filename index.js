@@ -74,7 +74,6 @@ client.on("message", message => {
 
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
-
   if (!client.commands.has(command)) return;
 
   try {
