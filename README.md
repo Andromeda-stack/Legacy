@@ -25,6 +25,14 @@ You will have to install *chalk* and *moment* using the npm commands!
 # Legacy discord! 
 * https://discord.gg/V6Q2W8v
 
+# W.I.P
+* DB intergration
+
+* Mute duration will be added
+
+* Major rework of module/s including updated commands and more games, more will be released once were close to release
+
+
 # Future plans
 
 Some future plans we have, are to create a TypeScript discord bot, With more AI interaction, which will include speaking with the bot, More information to come once the project starts!
