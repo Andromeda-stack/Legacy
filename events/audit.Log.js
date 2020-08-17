@@ -15,7 +15,7 @@ module.exports = [
         .setFooter("Legacy Audit: Joined")
 
         .setTimestamp();
-      member.guild.channels.cache.get("719075091727777873").send(helpEmbed);
+      member.guild.channels.cache.get("743231991897522256").send(helpEmbed);
     }
   },
   {
@@ -32,7 +32,8 @@ module.exports = [
         .setFooter("Legacy Audit: Left")
 
         .setTimestamp();
-      member.guild.channels.cache.get("719075091727777873").send(helpEmbed);
+      member.guild.channels.cache.get("743231991897522256").send(helpEmbed);
+      
     }
   }
 ];
