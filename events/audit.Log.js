@@ -1,5 +1,4 @@
 const mess = require("discord.js");
-const chalk = require("chalk");
 
 module.exports = [
   {

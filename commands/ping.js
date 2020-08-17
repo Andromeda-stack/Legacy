@@ -1,5 +1,4 @@
 const mess = require("discord.js");
-const { values } = require("../events/audit.Log");
 
 module.exports = {
   name: "ping",

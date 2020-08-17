@@ -8,9 +8,8 @@ module.exports = {
     const roleCheck = message.member.hasPermission("KICK_MEMBERS");
     if (!roleCheck)
       return message.channel.send(
-        `You must have "Kick Members" to use this command. ${
-          message.author.username
-        }`
+        `You must have "Kick Members" to use this command. ${message.author
+          .username}`
       );
 
     if (!message.mentions.users.first())

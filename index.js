@@ -14,6 +14,9 @@ const commandFiles = fs
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
+  console.log(
+    chalk.greenBright(file.slice(0) + " loaded!")
+  );
 }
 
 const gameFiles = fs
@@ -23,6 +26,7 @@ const gameFiles = fs
 for (const file of gameFiles) {
   const game = require(`./games/${file}`);
   client.commands.set(game.name, game);
+  console.log(chalk.greenBright("------Games------", "\n", file.slice(0) + " loaded!"));
 }
 
 client.events = new Discord.Collection();
@@ -34,6 +38,9 @@ const eventFiles = fs
 for (const file of eventFiles) {
   const event = require(`./events/${file}`);
   client.events.set(event.name, event);
+  console.log(
+    chalk.greenBright("------Events------", "\n", file.slice(0) + " loaded!")
+  );
 }
 
 client.once("ready", () => {
@@ -54,9 +61,9 @@ client.once("ready", () => {
     [
       "Start up was successful",
       `Prefix: ${prefix}`,
-      `Start-Up Log: Day is ${
-        days[d.getDay()]
-      }, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}, Date started is ${moment().format(
+      `Start-Up Log: Day is ${days[
+        d.getDay()
+      ]}, Time is ${d.getHours()}:${d.getMinutes()} ${ampm}, Date started is ${moment().format(
         "ll"
       )}`
     ].forEach(line => console.log(chalk.greenBright(line)));
@@ -71,7 +78,7 @@ client.once("ready", () => {
 
 client.on("message", message => {
   if (!message.content.startsWith(prefix) || message.author.bot) return;
-  
+
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLowerCase();
   if (!client.commands.has(command)) return;

@@ -1,7 +1,7 @@
 // Just a very simple creation, more will come to this soon!
 
 const mess = require("discord.js");
-const chalk = require("chalk");
+
 
 module.exports = {
   name: "flip",
