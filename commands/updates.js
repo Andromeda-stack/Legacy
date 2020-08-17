@@ -5,7 +5,7 @@ var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var http = new XMLHttpRequest();
 
 module.exports = {
-  name: "update",
+  name: "updates",
   execute(message) {
     fs.readFile("updates.md", function(err, data) {
       if (err) return console.log(err);
@@ -17,7 +17,12 @@ module.exports = {
       );
       http.send();
       text = http.responseText;
-      message.reply(data.toString());
+      const helpEmbed = new mess.MessageEmbed()
+      .setColor(0x28c9d0)
+      .setTitle(`Updates and Issues!`)
+      .setDescription(data.toString())
+      .setFooter("Legacy Audit: Updates")
+      message.channel.send(helpEmbed);
     });
   }
 };
