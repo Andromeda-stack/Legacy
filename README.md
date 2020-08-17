@@ -6,6 +6,10 @@ Currently the bot is still being made stable, aka mute and some other commands a
 
 Feel free to make a commit!
 
+* Wanna add Legacy to your guild? https://discord.com/oauth2/authorize?client_id=575717202536300554&scope=bot
+
+**Be advised Legacy is in beta and MAY have issues, Please use with caution and report any bugs on the git or in discord!**
+
 
 # Setup
 
