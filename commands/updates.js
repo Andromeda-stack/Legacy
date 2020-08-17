@@ -18,10 +18,10 @@ module.exports = {
       http.send();
       text = http.responseText;
       const helpEmbed = new mess.MessageEmbed()
-      .setColor(0x28c9d0)
-      .setTitle(`Updates and Issues!`)
-      .setDescription(data.toString())
-      .setFooter("Legacy Audit: Updates")
+        .setColor(0x28c9d0)
+        .setTitle(`Updates and Issues!`)
+        .setDescription(data.toString())
+        .setFooter("Legacy Audit: Updates");
       message.channel.send(helpEmbed);
     });
   }

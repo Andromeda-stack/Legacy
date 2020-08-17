@@ -18,6 +18,10 @@ module.exports = {
           value: "Deletes up to 100 messages, **Mods + Admins**"
         },
         {
+          name: `${prefix}mute`,
+          value: "Mutes members, **Mods + Admins**"
+        },
+        {
           name: `${prefix}ban`,
           value: "Bans members, **Mods + Admins**"
         },
@@ -32,6 +36,10 @@ module.exports = {
         {
           name: `${prefix}flip`,
           value: "Heads or Tails Game!"
+        },
+        {
+          name: `${prefix}updates`,
+          value: "Current Bugs and Updates!"
         },
         {
           name: `${prefix}ping`,
