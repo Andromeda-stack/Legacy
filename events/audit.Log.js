@@ -1,4 +1,5 @@
 const mess = require("discord.js");
+const chalk = require("chalk");
 
 module.exports = [
   {
@@ -36,5 +37,3 @@ module.exports = [
     }
   }
 ];
-
-console.log("Audit Log loaded");

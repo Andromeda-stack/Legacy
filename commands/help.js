@@ -45,4 +45,4 @@ module.exports = {
   }
 };
 
-console.log("Help command loaded");
+

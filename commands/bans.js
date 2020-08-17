@@ -1,3 +1,5 @@
+const chalk = require("chalk");
+
 module.exports = {
   name: "ban",
   description: "Bans bad people",
@@ -33,4 +35,3 @@ module.exports = {
   }
 };
 
-console.log("Bans command loaded");

@@ -36,4 +36,4 @@ module.exports = {
   }
 };
 
-console.log("Kick command loaded");
+

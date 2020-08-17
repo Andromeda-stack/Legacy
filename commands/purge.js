@@ -29,4 +29,3 @@ module.exports = {
   }
 };
 
-console.log("Purge command loaded");

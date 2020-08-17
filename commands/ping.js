@@ -29,4 +29,4 @@ module.exports = {
     awaitPing.delete();
   }
 };
-console.log("Ping command loaded");
+

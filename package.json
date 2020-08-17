@@ -6,6 +6,7 @@
         "discord.js": "^12.2.0",
         "moment": "^2.27.0",
         "nodemon": "^2.0.4",
-        "requirejs": "^2.3.6"
+        "requirejs": "^2.3.6",
+        "xmlhttprequest": "^1.8.0"
     }
 }
