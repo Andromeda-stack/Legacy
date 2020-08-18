@@ -14,9 +14,7 @@ const commandFiles = fs
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
-  console.log(
-    chalk.greenBright(file.slice(0) + " loaded!")
-  );
+  console.log(chalk.greenBright(file.slice(0) + " loaded!"));
 }
 
 const gameFiles = fs
@@ -26,7 +24,9 @@ const gameFiles = fs
 for (const file of gameFiles) {
   const game = require(`./games/${file}`);
   client.commands.set(game.name, game);
-  console.log(chalk.greenBright("------Games------", "\n", file.slice(0) + " loaded!"));
+  console.log(
+    chalk.greenBright("------Games------", "\n", file.slice(0) + " loaded!")
+  );
 }
 
 client.events = new Discord.Collection();
@@ -88,7 +88,7 @@ client.on("message", message => {
   } catch (error) {
     console.error(error);
     message.reply(
-      `there was an error trying to execute command: (${command})!`
+      `There was an error trying to execute command: { ${command} }!`
     );
   }
 });
