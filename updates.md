@@ -6,4 +6,4 @@
 
 * Info: SQL as stated above we are working on adding it, database files may start to appear in legacy, but wont do anything till the modules have everything updated.
 
-* Next Update: Were getting rid of boring text that the bot sends, so were going to be adding embeds. I am working on find a efficient way to trigger embeds. but its taking a lot of time to do such testing as well.
+* Next Update: Sql will start to be added, once files start to show the bot will automatically be put into BETA and marked unstable until further testing is conducted. Forks/testing would really help us fix/add things.
