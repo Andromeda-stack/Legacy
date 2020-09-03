@@ -17,22 +17,18 @@ Feel free to make a commit!
 
 * Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
 
-**note:** 
-You will have to install *chalk* and *moment* using the npm commands!
 
-* Run "node index.js" and the bot will start!
+**Dependency:**
+npm i xmlhttprequest (For Updates.js)
 
-* Please report any issues on git!
+npm i discord.js (Core for Discord bot)
+
+npm i chalk (Simply for color text in console)
+
+npm i moment (Time format)
 
 # Legacy discord! 
 * https://discord.gg/V6Q2W8v
-
-# W.I.P
-* DB intergration
-
-* Mute duration will be added
-
-* Major rework of module/s including updated commands and more games, more will be released once were close to release
 
 
 # Future plans
