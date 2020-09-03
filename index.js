@@ -1,9 +1,13 @@
 const fs = require("fs");
+
 const Discord = require("discord.js");
+
 const { prefix, token } = require("./prop.json");
 
 const chalk = require("chalk");
+
 const moment = require("moment");
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 

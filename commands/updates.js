@@ -1,5 +1,6 @@
 var fs = require("fs");
 const mess = require("discord.js");
+let url = require('../prop.json')
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 var http = new XMLHttpRequest();
@@ -12,7 +13,7 @@ module.exports = {
       http = new XMLHttpRequest();
       http.open(
         "GET",
-        "https://github.com/gabew18/Legacy/blob/master/updates.md",
+        `${url}`,
         true
       );
       http.send();

@@ -17,8 +17,8 @@ module.exports = {
         `You have to mention someone! ${message.author.username}`
       );
 
-    const args = message.content.split(" ").slice(1);
-    const kickReason = args.slice(1).join(" ");
+    const args = message.content.split(" ").slice();
+    const kickReason = args.slice(2).join(" ");
     if (!kickReason)
       return message.channel.send(
         `You have to give a reason! ${message.author.username}`
@@ -36,6 +36,18 @@ module.exports = {
 
     const user = message.mentions.members.first();
     user.roles.add(role);
-    message.channel.send(`Muted ${user}, Reason: ${kickReason}`); // sql soon and some other futures, most credit to the discord.js docs.
+    const muteEmbed = new mess.MessageEmbed()
+      .setColor(0x28c9d0)
+      .addFields(
+      {
+        name: 'User Muted',
+        value: `Muted ${user}. Reason: ${kickReason}`
+      },
+      {
+        name: 'Staff',
+        value: `${message.author.username}`
+      })
+      .setFooter("Legacy Audit: Mute");
+    message.channel.send(muteEmbed);
   }
 };

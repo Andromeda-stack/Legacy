@@ -1,3 +1,5 @@
+const mess = require("discord.js");
+
 module.exports = {
   name: "purge",
   description: "Deletes up to 100 messages",
@@ -19,13 +21,15 @@ module.exports = {
         limit: amountCalledToDelete
       });
       message.channel.bulkDelete(messages);
-      let newMessage = await message.channel.send(
-        `Deleted ${amountCalledToDelete} message/s`
-      );
+      let purgeEmebed = new mess.MessageEmbed()
+        .setColor(0x28c9d0)
+        .setTitle(`Purge`)
+        .setDescription(`Deleted ${amountCalledToDelete} message/s`)
+        .setFooter("Legacy Audit: Purge");
+      let newMessage = await message.channel.send(purgeEmebed);
       newMessage.delete({ timeout: 2000 });
     } catch (error) {
       console.error(error);
     }
   }
 };
-
