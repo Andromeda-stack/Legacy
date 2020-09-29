@@ -39,7 +39,6 @@ module.exports = {
                             return console.log(err.message)
 
                         }
-                        console.log(`Inserted row, ${this.lastID}`)
                     })
 
                 })
