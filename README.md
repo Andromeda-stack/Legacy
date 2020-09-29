@@ -13,13 +13,15 @@ Feel free to make a commit!
 
 * Download legacy and run "npm install discord.js"
 
-* Create a "prop.json" and include "token" and "prefix"
+* Create a "prop.json" and include "token" and "prefix" and "url" if you want updates leading to the git, not required.
 
 * Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
 
 
 **Dependency:**
 npm i xmlhttprequest (For Updates.js)
+
+npm i sqlite3 (sql DB)
 
 npm i discord.js (Core for Discord bot)
 
