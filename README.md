@@ -9,14 +9,6 @@ Feel free to make a commit!
 **Be advised Legacy is in beta and MAY have issues, Please use with caution and report any bugs on the git or in discord!**
 
 
-# Setup
-
-* Download legacy and run "npm install discord.js"
-
-* Create a "prop.json" and include "token" and "prefix" and "url" if you want updates leading to the git, not required.
-
-* Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
-
 
 **Dependency:**
 npm i xmlhttprequest (For Updates.js)
@@ -28,6 +20,14 @@ npm i discord.js (Core for Discord bot)
 npm i chalk (Simply for color text in console)
 
 npm i moment (Time format)
+
+
+# Setup
+
+* Download legacy and run "npm install discord.js", as well as the other dependency above.
+
+
+* Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
 
 # Legacy discord! 
 * https://discord.gg/V6Q2W8v
