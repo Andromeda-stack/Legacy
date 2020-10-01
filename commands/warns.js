@@ -23,7 +23,7 @@ module.exports = {
                 if (err) {
                     return message.channel.send("There was an issue logging warning into database.....:cry:")
                 } else {
-                    return message.channel.send(`**Warning**: ${taggedUser}\n` + `You have received a warning for: ` + "````" + warnReason + "```")
+                    return message.channel.send(`**Warning**: ${taggedUser}\n` + `You have received a warning for: ` + "````" + warnReason + "```") // this is ugly and will probably be changed
                 }
 
             })
