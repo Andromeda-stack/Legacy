@@ -1,4 +1,4 @@
-# Updates and Bugs will be posted here soon!
+# Updates and Bugs will be posted here!
 
 * Suggestion/bug: 
 
