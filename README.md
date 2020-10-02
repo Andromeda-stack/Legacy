@@ -15,7 +15,7 @@ Feel free to make a commit!
 
 * Create a "prop.json" and include "token" and "prefix" and "url" if you want updates leading to the git, not required.
 
-* Go to "prop.json" and paste your bot token. If you dont have one please go here, and create a token https://discord.com/developers/applications
+* Go to "prop.json" and paste your bot token. If you don't have one please go here, and create a token https://discord.com/developers/applications
 
 
 **Dependency:**

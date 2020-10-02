@@ -1,5 +1,6 @@
 const db = require("../config");
 
+const mess = require("discord.js");
 
 module.exports = {
     name: "ban",
@@ -10,8 +11,7 @@ module.exports = {
         const banReason = args.slice(1).join(" ");
 
         if (!roleCheck) return message.reply("You must be an admin!");
-        if (!message.mentions.users.size)
-            return message.reply("You have to mention someone to ban!");
+        if (!message.mentions.users.size) return message.reply("You have to mention someone to ban!");
 
         const taggedUser = message.mentions.users.first();
         if (taggedUser) {
@@ -21,16 +21,30 @@ module.exports = {
                 member
 
                     .ban({
-                    reason: `${banReason}`
+                    //reason: `${banReason}`
                 })
 
                 .then(() => {
-                    message.reply(`:hammer: **Successfully banned ${taggedUser.tag}**`);
-                })
+                        const banEmbed = new mess.MessageEmbed()
+                            .setColor(0x28c9d0)
+                            .setTitle(`User Banned!`)
+                            .addFields({
+                                name: "User Banned",
+                                value: `${taggedUser.tag}`,
+                                inline: true
+                            }, { name: "Reason", value: `${banReason}`, inline: true }, {
+                                name: "Staff",
+                                value: `${message.author.username}`,
+                                inline: true
+                            })
+                            .setTimestamp()
+                            .setFooter("Legacy Audit: Ban");
 
-                .catch(err => {
-                    message.reply(`I couldn't ban ${taggedUser.tag}`);
-                });
+                        message.channel.send(banEmbed);
+                    })
+                    .catch(err => {
+                        message.reply(`I couldn't ban ${taggedUser.tag}`);
+                    });
 
                 db.serialize(function() {
 
