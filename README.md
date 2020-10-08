@@ -45,8 +45,9 @@ npm i moment (Time format)
 
 
 # Discord 
-* https://discord.gg/V6Q2W8v
+* [Discord Invite](https://discord.gg/V6Q2W8v)
 
 
 # legacy_invite
-* https://discord.com/oauth2/authorize?client_id=575717202536300554&scope=bot
+
+* [Legacy Invite](https://discord.com/oauth2/authorize?client_id=575717202536300554&scope=bot)
