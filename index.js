@@ -48,6 +48,7 @@ for (const file of eventFiles) {
 
 client.once("ready", () => {
     try {
+	console.clear()
         console.log("--------------------------------");
         const d = new Date();
         const ampm = d.getHours() >= 12 ? "PM" : "AM";
