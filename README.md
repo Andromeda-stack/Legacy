@@ -1,3 +1,9 @@
+#
+THIS PROJECT HAS BEEN DISCONTINUED, LEGACY V2 IS IN WORKS!!!, Progress has been made. New features, and some features from legacy will be imported. Legacy v2 will be closed
+source until further notice.
+
+
+
 # Legacy
 
 Open Source Discord.js bot!
